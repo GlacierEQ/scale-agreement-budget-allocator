@@ -1,1 +1,15 @@
-{"capabilities": ["hyper-scaling"]}
+{
+  "schema": "glaciereq.repo-capabilities.v1",
+  "repository": "GlacierEQ/scale-agreement-budget-allocator",
+  "family": "annotation_budget_allocation",
+  "capabilities": [
+    "normalized_need_validation",
+    "uncertainty_disagreement_weighted_priority",
+    "deterministic_need_tie_break",
+    "global_annotation_budget_guard",
+    "per_item_annotation_ceiling",
+    "uncertainty_threshold_extra_rounds",
+    "python_go_allocation_parity"
+  ],
+  "truth_boundary": "Deterministic in-process allocation mechanism only. It does not infer label truth, score annotator quality, detect collusion or evaluation contamination, execute labeling jobs, or claim Scale AI adoption."
+}
