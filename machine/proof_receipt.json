@@ -1,0 +1,31 @@
+{
+  "schema": "glaciereq.proof-receipt.v1",
+  "repository": "GlacierEQ/scale-agreement-budget-allocator",
+  "source_sha": "ae1083a706b168843d3c704cefb0aa86bc4ea4bae5cac4e3c2c040b5ead08c6a",
+  "proof_id": "elite-scale-agreement-budget-allocator-1786335149",
+  "environment": {
+    "python": "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python",
+    "PYTHONPATH": "/Users/kcbflux/job-app/repos/scale-agreement-budget-allocator:/Users/kcbflux/job-app/repos/scale-agreement-budget-allocator/src",
+    "entry": "unittest"
+  },
+  "tests": [
+    "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python -m unittest discover -s tests -v (x2)"
+  ],
+  "adversarial_tests": [
+    "tests/test_adversarial.py"
+  ],
+  "runtime": {
+    "operate": "scripts/operate.py (x2)",
+    "dual_run_ok": true,
+    "proof_dual_run_ok": true
+  },
+  "result": "PASS",
+  "limitations": [
+    "not production deployed",
+    "reference implementation only"
+  ],
+  "timestamp": "2026-08-10T04:12Z",
+  "artifact_hashes": {
+    "operability_receipt": "cf000b2f0546a0d86384b25168c90681d8530ebe375e4fa00c0d0e7473970037"
+  }
+}

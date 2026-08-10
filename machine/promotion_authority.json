@@ -1,0 +1,11 @@
+{
+  "schema": "glaciereq.promotion-authority-grant.v1",
+  "repository": "GlacierEQ/scale-agreement-budget-allocator",
+  "source_sha": "ae1083a706b168843d3c704cefb0aa86bc4ea4bae5cac4e3c2c040b5ead08c6a",
+  "proof_receipt_digest": "9f71afffdf68d409b9ae94b8e24e8e7a85c71554a3afa872468d5457c2674720",
+  "not_after": 1788927149.234226,
+  "mac": "bd1a5fb09b2999dcaa9786b463b4ff3d511a6d5bb7423d8eda3a0e97ca1d60a4",
+  "issuer": "local_operator_promotion_authority",
+  "verified": true,
+  "secret_ref": "src/promotion_authority.py::LOCAL_OPERATOR_SECRET"
+}

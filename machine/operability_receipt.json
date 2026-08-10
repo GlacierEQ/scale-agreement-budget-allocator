@@ -1,0 +1,28 @@
+{
+  "schema": "glaciereq.operability-receipt.v1",
+  "repository": "GlacierEQ/scale-agreement-budget-allocator",
+  "at": "2026-08-10T04:12Z",
+  "source_sha": "ae1083a706b168843d3c704cefb0aa86bc4ea4bae5cac4e3c2c040b5ead08c6a",
+  "entry": "scripts/operate.py",
+  "primary_output": {
+    "module": "budget",
+    "ok": true,
+    "repository": "GlacierEQ/scale-agreement-budget-allocator",
+    "smoke": {
+      "args": [
+        "[ItemNeed(item_id='sample_item_id', mode"
+      ],
+      "content_checked": true,
+      "invoked": true,
+      "kind": "class",
+      "method": "allocate",
+      "module_local": true,
+      "name": "AgreementBudgetAllocator",
+      "result": [
+        "Allocation(item_id='sample_item_id', labels=1)"
+      ]
+    }
+  },
+  "dual_run_ok": true,
+  "result": "PASS"
+}
