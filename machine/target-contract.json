@@ -2,21 +2,58 @@
   "schema": "glaciereq.repo-target-contract.v1",
   "identity": {
     "repository_id": "GlacierEQ/scale-agreement-budget-allocator",
-    "family": "elite-estate"
+    "family": "annotation_budget_allocation"
   },
   "current": {
-    "state": "PROMOTED",
+    "state": "EVOLVING",
     "implemented": true,
     "tested": true,
-    "deployed": false
+    "deployed": false,
+    "canonical_position_pending_exact_head_proof": false
   },
-  "nonclaims": [
-    "no employer affiliation",
-    "no production deployment without receipt"
+  "target": {
+    "purpose": "Spend a finite annotation budget preferentially on items with the greatest uncertainty or prior disagreement while preserving deterministic global and per-item bounds.",
+    "central_bottleneck": "Uniform k-label policies waste scarce annotation capacity on easy items and make underfunded decisions depend on incidental input ordering instead of explicit need.",
+    "success": [
+      "All normalized need inputs are finite and within [0,1].",
+      "Duplicate or empty item identities refuse before allocation.",
+      "Allocation never exceeds the global label budget or per-item ceiling.",
+      "Underfunded baselines and tied scores are deterministic.",
+      "Extra agreement rounds are reserved for materially uncertain or disputed items.",
+      "Python and Go surfaces preserve the same allocation invariants."
+    ]
+  },
+  "invariants": [
+    "unique non-empty item identity",
+    "finite normalized need inputs",
+    "deterministic score ordering and tie breaking",
+    "global annotation budget is never exceeded",
+    "per-item annotation ceiling is never exceeded",
+    "extra rounds require uncertainty/disagreement threshold",
+    "no external labeling side effect occurs"
   ],
   "donor_plan": {
-    "mode": "none",
-    "donors": []
+    "status": "RESOLVED",
+    "strategy": "INDEPENDENT_MECHANISM_PRESERVED",
+    "donors": [],
+    "basis": "The repository implements the allocation mechanism; sibling Scale-lens repositories own different quality/integrity concerns."
   },
-  "frozen_at": "2026-08-10T04:12Z"
+  "promotion": {
+    "required_tests": ["python-unit", "python-adversarial", "go-parity", "canonical-position"],
+    "require_exact_source_sha": true,
+    "require_receipt": true,
+    "require_nonclaims": true,
+    "next_gate": "EVOLUTION_CURSOR_DEFINED"
+  },
+  "evolution": {
+    "cursor": "next:add_pluggable_cost_quality_utility_and_historical_outcome_feedback",
+    "composition_gate": "Do not consume collusion or contamination signals until receipt-bound sibling integration is implemented and proven."
+  },
+  "nonclaims": [
+    "no Scale AI affiliation",
+    "not a production Scale AI allocation service",
+    "no external labeling jobs are executed",
+    "no label correctness or annotator-quality conclusion is produced",
+    "no exercised integration with the collusion or eval-poison sibling repositories"
+  ]
 }

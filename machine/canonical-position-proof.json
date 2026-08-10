@@ -1,0 +1,32 @@
+{
+  "schema": "glaciereq.canonical-position-proof.v1",
+  "repository": "GlacierEQ/scale-agreement-budget-allocator",
+  "gate": "CANONICAL_POSITION_RESOLVED",
+  "result": "PASS",
+  "tested_source_sha": "05356e957c2573246438785381bc23bd5c770ca8",
+  "workflow": {
+    "provider": "github-actions",
+    "run_id": 31389230584,
+    "python": "success",
+    "go": "success"
+  },
+  "observed_scope": [
+    "normalized input validation",
+    "duplicate/empty identity refusal",
+    "uncertainty-disagreement priority",
+    "deterministic tie breaking",
+    "global and per-item budget ceilings",
+    "threshold-gated extra agreement rounds",
+    "Python and Go bounded-allocation semantics",
+    "canonical role and non-integration contracts"
+  ],
+  "canonical_role": "CANONICAL_SPECIALIST:uncertainty_weighted_annotation_budget_allocation",
+  "limitations": [
+    "in-process reference allocator",
+    "no labeling-job execution",
+    "no label-truth or annotator-quality conclusion",
+    "no exercised integration with collusion or eval-contamination siblings",
+    "no Scale AI affiliation or adoption claim"
+  ],
+  "receipt_commit_policy": "Final receipt-inclusive PR-head Python and Go CI must pass before merge."
+}

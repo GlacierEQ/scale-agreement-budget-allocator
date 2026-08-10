@@ -1,0 +1,64 @@
+{
+  "schema": "glaciereq.repo-canonical-position.v1",
+  "repository": "GlacierEQ/scale-agreement-budget-allocator",
+  "position_state": "RESOLVED",
+  "role": "CANONICAL_SPECIALIST",
+  "company_target": "Scale AI",
+  "canonical_identity": "agreement-budget-allocator",
+  "owns": "uncertainty_weighted_annotation_budget_allocation",
+  "unique_value": [
+    "finite label budgets are prioritized by normalized model uncertainty and prior disagreement",
+    "global and per-item label ceilings are explicit invariants",
+    "underfunded baselines prioritize highest-need items instead of depending on caller order",
+    "extra agreement rounds are reserved for materially uncertain or disputed items",
+    "duplicate item identities and malformed normalized inputs fail closed",
+    "Python and Go implementations share deterministic ordering and bounded allocation semantics"
+  ],
+  "does_not_own": [
+    "label truth or adjudication",
+    "annotator quality scoring",
+    "annotator collusion detection",
+    "train/eval contamination detection",
+    "labeling-job execution or provider scheduling"
+  ],
+  "capability_contribution": {
+    "family": "annotation_budget_allocation",
+    "extractable_mechanisms": [
+      "normalized_need_validation",
+      "uncertainty_disagreement_weighted_priority",
+      "deterministic_need_tie_break",
+      "global_annotation_budget_guard",
+      "per_item_annotation_ceiling",
+      "uncertainty_threshold_extra_rounds"
+    ],
+    "ownership": "Canonical Scale-AI-lens specialist for deterministic bounded allocation of annotation agreement budget."
+  },
+  "relationships": [
+    {
+      "repository": "GlacierEQ/scale-label-collusion-bound",
+      "relation": "COMPOSES_WITH",
+      "integration_exercised": false,
+      "boundary": "collusion evidence may influence future disagreement policy, but this allocator does not detect collusion"
+    },
+    {
+      "repository": "GlacierEQ/scale-eval-poison-sentinel",
+      "relation": "COMPOSES_WITH",
+      "integration_exercised": false,
+      "boundary": "contamination evidence is a separate evaluation-integrity concern and is not consumed by the allocator"
+    }
+  ],
+  "next_evolution": "Add pluggable cost/quality utility functions and historical outcome feedback while preserving deterministic global/per-item budget guards; only then exercise composition with independently proven quality signals.",
+  "evidence_refs": [
+    "src/budget.py",
+    "go/budget/budget.go",
+    "tests/test_budget.py",
+    "go/budget/budget_test.go",
+    "machine/target-contract.json"
+  ],
+  "nonclaims": [
+    "no Scale AI affiliation",
+    "not a production Scale AI allocation service",
+    "no external labeling jobs are executed",
+    "no exercised integration with the collusion or eval-poison sibling repositories"
+  ]
+}
