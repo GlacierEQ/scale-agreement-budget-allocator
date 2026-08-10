@@ -5,11 +5,11 @@
     "family": "annotation_budget_allocation"
   },
   "current": {
-    "state": "PROMOTED",
+    "state": "EVOLVING",
     "implemented": true,
     "tested": true,
     "deployed": false,
-    "canonical_position_pending_exact_head_proof": true
+    "canonical_position_pending_exact_head_proof": false
   },
   "target": {
     "purpose": "Spend a finite annotation budget preferentially on items with the greatest uncertainty or prior disagreement while preserving deterministic global and per-item bounds.",
@@ -36,14 +36,18 @@
     "status": "RESOLVED",
     "strategy": "INDEPENDENT_MECHANISM_PRESERVED",
     "donors": [],
-    "basis": "The repository already implements the allocation mechanism; sibling Scale-lens repositories own different quality/integrity concerns."
+    "basis": "The repository implements the allocation mechanism; sibling Scale-lens repositories own different quality/integrity concerns."
   },
   "promotion": {
     "required_tests": ["python-unit", "python-adversarial", "go-parity", "canonical-position"],
     "require_exact_source_sha": true,
     "require_receipt": true,
     "require_nonclaims": true,
-    "next_gate": "CANONICAL_POSITION_RESOLVED"
+    "next_gate": "EVOLUTION_CURSOR_DEFINED"
+  },
+  "evolution": {
+    "cursor": "next:add_pluggable_cost_quality_utility_and_historical_outcome_feedback",
+    "composition_gate": "Do not consume collusion or contamination signals until receipt-bound sibling integration is implemented and proven."
   },
   "nonclaims": [
     "no Scale AI affiliation",
