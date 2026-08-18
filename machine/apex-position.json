@@ -1,10 +1,10 @@
 {
-  "schema": "glaciereq.repo-canonical-position.v1",
+  "schema": "glaciereq.repo-apex-position.v1",
   "repository": "GlacierEQ/scale-agreement-budget-allocator",
   "position_state": "RESOLVED",
-  "role": "CANONICAL_SPECIALIST",
+  "role": "APEX_SPECIALIST",
   "company_target": "Scale AI",
-  "canonical_identity": "agreement-budget-allocator",
+  "apex_identity": "agreement-budget-allocator",
   "owns": "uncertainty_weighted_annotation_budget_allocation",
   "unique_value": [
     "finite label budgets are prioritized by normalized model uncertainty and prior disagreement",
@@ -31,7 +31,7 @@
       "per_item_annotation_ceiling",
       "uncertainty_threshold_extra_rounds"
     ],
-    "ownership": "Canonical Scale-AI-lens specialist for deterministic bounded allocation of annotation agreement budget."
+    "ownership": "APEX Scale-AI-lens specialist for deterministic bounded allocation of annotation agreement budget."
   },
   "relationships": [
     {

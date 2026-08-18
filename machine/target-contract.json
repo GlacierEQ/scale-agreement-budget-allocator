@@ -9,7 +9,7 @@
     "implemented": true,
     "tested": true,
     "deployed": false,
-    "canonical_position_pending_exact_head_proof": false
+    "apex_position_pending_exact_head_proof": false
   },
   "target": {
     "purpose": "Spend a finite annotation budget preferentially on items with the greatest uncertainty or prior disagreement while preserving deterministic global and per-item bounds.",
@@ -39,7 +39,7 @@
     "basis": "The repository implements the allocation mechanism; sibling Scale-lens repositories own different quality/integrity concerns."
   },
   "promotion": {
-    "required_tests": ["python-unit", "python-adversarial", "go-parity", "canonical-position"],
+    "required_tests": ["python-unit", "python-adversarial", "go-parity", "apex-position"],
     "require_exact_source_sha": true,
     "require_receipt": true,
     "require_nonclaims": true,
